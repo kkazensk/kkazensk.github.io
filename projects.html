@@ -3,24 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Your Name</title>
+  <title>Projects - Kylee Kazenski</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <h1>Projects</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="resume.html">Resume</a>
-      <a href="education.html">Education</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div id="header"></div>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
 
   <section class="section">
     <h2>My Projects</h2>
     <ul>
       <li><a href="projects/project1.html">Project 1</a></li>
-      <li
+      <li><a href="projects/project2.html">Project 2</a></li>
+      <!-- Add more project links here as needed -->
+    </ul>
+  </section>
+  
+  <footer>
+    <p>© 2024 Kylee Kazenski. All rights reserved.</p>
+  </footer>
+</body>
+</html>
 
