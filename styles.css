@@ -1,88 +1,85 @@
-/* Celtic Irish-Themed Styles */
-
-/* General Colors */
-:root {
-  --primary-green: #3B7A57; /* Deep emerald green */
-  --secondary-green: #6DAA6C; /* Lighter, vibrant green */
-  --gold: #D4AF37; /* Rich gold accent */
-  --neutral-white: #F8F5F2; /* Soft, neutral white */
-  --dark-background: #2B3A2F; /* Dark green for backgrounds */
-}
-
-/* Body */
-body {
-  font-family: 'Arial', sans-serif; /* Update to a more readable font */
-  background-color: var(--neutral-white);
-  color: #333;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Header */
-.header {
-  background-color: var(--primary-green);
-  color: var(--neutral-white);
-  padding: 20px;
-  text-align: center;
-  font-family: 'Uncial Antiqua', serif; /* Celtic-inspired font for headings */
-}
-
-nav a {
-  color: var(--gold);
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--secondary-green);
-}
-
-/* Section Styling */
-.section {
-  padding: 50px;
-  background-color: var(--neutral-white);
+body {
+  background-color: #f3f4f6;
   color: #333;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #006400;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffdd00;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('assets/hero-background.jpg');
+  background-size: cover;
+  color: #fff;
   text-align: center;
 }
 
-/* Celtic-Inspired Buttons */
-button, .btn {
-  background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
-  border: 2px solid var(--gold);
-  border-radius: 8px;
-  color: var(--neutral-white);
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-}
-
-button:hover, .btn:hover {
-  background: var(--secondary-green);
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  background-color: var(--dark-background);
-  color: var(--neutral-white);
+.hero-content {
+  backdrop-filter: blur(10px);
   padding: 20px;
-  text-align: center;
-  font-size: 14px;
+  border-radius: 15px;
 }
 
-/* Celtic Knot Pattern Example */
-.header::after, footer::before {
-  content: '';
-  display: block;
-  height: 10px;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--gold),
-    var(--gold) 10px,
-    transparent 10px,
-    transparent 20px
-  );
-  opacity: 0.5; /* Subtle Celtic border effect */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #006400;
+  color: #fff;
+  margin-top: 50px;
 }
