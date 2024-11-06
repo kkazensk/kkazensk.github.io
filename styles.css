@@ -1,15 +1,18 @@
+/* Root colors for Celtic Irish theme */
 :root {
-  --gold: #bfa400;
-  --green: #034c26;
-  --light-bg: #f9f9f9;
+  --celtic-green: #006400; /* Darker Celtic green */
+  --celtic-gold: #FFD700; /* Celtic gold */
+  --light-bg: #F5F5F5;
   --dark-bg: #101820;
   --text-color-light: #222;
   --text-color-dark: #f0f0f0;
 }
 
+/* Basic body styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
+  padding: 0;
   transition: background-color 0.5s, color 0.5s;
 }
 
@@ -23,47 +26,103 @@ body {
   color: var(--text-color-dark);
 }
 
+/* Header styles */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: var(--gold);
+  background-color: var(--celtic-gold);
 }
 
 .nav-bar a {
-  color: var(--green);
+  color: var(--celtic-green);
   text-decoration: none;
   margin: 0 1rem;
   transition: color 0.3s;
 }
 
 .nav-bar a:hover {
-  color: var(--gold);
+  color: var(--celtic-gold);
 }
 
 .theme-toggle {
-  background: var(--green);
-  color: var(--gold);
+  background: var(--celtic-green);
+  color: var(--celtic-gold);
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 5px;
 }
 
+/* Section styles */
 .section {
   padding: 4rem 2rem;
+  background: rgba(0, 0, 0, 0.05); /* Slight transparent layer */
+  margin: 2rem 0;
+  border-radius: 15px;
 }
 
-.project-card {
-  background: rgba(255, 255, 255, 0.8);
+/* Image box style */
+.image-box {
+  background-color: rgba(0, 100, 0, 0.2); /* Transparent green background */
   border-radius: 15px;
+  overflow: hidden;
+  max-width: 300px;
+  margin: 1rem;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Modern rounded cards for content */
+.skill-card, .education-card, .experience-card {
+  background-color: rgba(255, 215, 0, 0.1); /* Transparent gold background */
+  border-radius: 15px;
+  padding: 2rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin: 1rem;
+}
+
+.skill-card:hover, .education-card:hover, .experience-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Project cards */
+.project-card {
+  background: rgba(255, 215, 0, 0.15); /* Transparent gold background */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 2rem;
+  margin: 1rem;
   transition: transform 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.view-more {
+  background-color: var(--celtic-green);
+  color: var(--celtic-gold);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.view-more:hover {
+  background-color: var(--celtic-gold);
+  color: var(--celtic-green);
 }
