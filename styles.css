@@ -1,85 +1,69 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
+:root {
+  --gold: #bfa400;
+  --green: #034c26;
+  --light-bg: #f9f9f9;
+  --dark-bg: #101820;
+  --text-color-light: #222;
+  --text-color-dark: #f0f0f0;
 }
 
 body {
-  background-color: #f3f4f6;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-.navbar {
+.light-mode {
+  background-color: var(--light-bg);
+  color: var(--text-color-light);
+}
+
+.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--text-color-dark);
+}
+
+.header {
   display: flex;
-  justify-content: center;
-  background-color: #006400;
-  padding: 10px 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--gold);
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar a {
-  color: #fff;
+.nav-bar a {
+  color: var(--green);
   text-decoration: none;
-  font-weight: bold;
+  margin: 0 1rem;
   transition: color 0.3s;
 }
 
-.navbar a:hover {
-  color: #ffdd00;
+.nav-bar a:hover {
+  color: var(--gold);
 }
 
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: url('assets/hero-background.jpg');
-  background-size: cover;
-  color: #fff;
-  text-align: center;
-}
-
-.hero-content {
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 15px;
+.theme-toggle {
+  background: var(--green);
+  color: var(--gold);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .section {
-  padding: 60px 20px;
-  text-align: center;
+  padding: 4rem 2rem;
 }
 
-.skills-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.skill-card {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  padding: 15px;
+.project-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  padding: 2rem;
   transition: transform 0.3s;
 }
 
-.skill-card:hover {
+.project-card:hover {
   transform: translateY(-10px);
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #006400;
-  color: #fff;
-  margin-top: 50px;
 }
