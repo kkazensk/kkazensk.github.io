@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+// https://github.com/metafizzy/flickity/issues/754
+@import "~flickity/css/flickity.css";
+
+// Import Lato Google Font
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+// Update Bulma's global variables
+$family-sans-serif: "Lato", sans-serif;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// More theme colors could be added here...
+$primary: #454545;
+
+$spaces: ("0": 0, "1": 1.65rem, "2": 1.75rem);
+
+$margin-default: map-get($spaces, "2") map-get($spaces, "0");
+
+// Update some of Bulma's component & color variables
+$footer-padding: 3rem 1.5rem;
+$link: hsl(171, 100%, 41%);
+
+// Custom Styles
+.card-gap {margin-top:1.75rem}
+.modal-trigger { cursor: pointer; }
+a.icon > strong {margin-left:.25rem}
+.modal-card-body div.content {margin:$margin-default}
+
+// import everything - alternatively import just what you need: https://bulma.io/documentation/overview/modular/
+@import "~bulma/bulma"; 
+
+// override specific bulma styles
+.section {padding: 2.15rem 1.5rem}
+
+// Flickity - begin
+.carousel-cell {width:100%}
+// Flickity - end
+
+// Theme Colors
+$light-bg: #F5F5F5;  // Light mode background
+$dark-bg: #101820;   // Dark mode background
+$light-text: #222222; // Light mode text
+$dark-text: #f0f0f0;  // Dark mode text
+$primary-green: #006400;  // Celtic green (dark green)
+$primary-gold: #FFD700;   // Celtic gold
+
+// Body and text colors based on the theme
+$body-bg-light: $light-bg;
+$body-bg-dark: $dark-bg;
+$body-text-light: $light-text;
+$body-text-dark: $dark-text;
+
+$primary-bg-light: #ffffff; // Light mode primary background
+$primary-bg-dark: $dark-bg;  // Dark mode primary background
+$primary-text-light: $light-text; // Light mode primary text
+$primary-text-dark: $dark-text;   // Dark mode primary text
+
+/* Light Mode */
+.light-mode {
+  background-color: $light-bg;
+  color: $light-text;
+  
+  --primary-bg: $primary-bg-light;
+  --primary-text: $primary-text-light;
+  --body-bg: $body-bg-light;
+  --body-text: $body-text-light;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: $dark-bg;
+  color: $dark-text;
+  
+  --primary-bg: $primary-bg-dark;
+  --primary-text: $primary-text-dark;
+  --body-bg: $body-bg-dark;
+  --body-text: $body-text-dark;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--body-bg);
+  color: var(--body-text);
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-text);
+}
+
+/* Example of a specific component */
+.section {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background-color: $primary-green;
+  color: $primary-gold;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: $primary-gold;
+  color: $primary-green;
+}
+
+/* Modal Styling */
+.modal-trigger { cursor: pointer; }
+.modal-card-body div.content { margin: $margin-default; }
+
+/* Additional Styling for Flickity */
+.carousel-cell {
+  width: 100%;
+}
